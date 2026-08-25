@@ -1,0 +1,68 @@
+clear
+
+neofetch
+echo -e "\033[1;34m"
+figlet "P-Shell"
+echo -e "\033[1;34m        WELCOME BACK \033[0;34m"
+
+echo -e "\033[1;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\034"
+echo -e "\033[0;34m  User    :034$(whoami)"
+echo -e "\033[0;34m  Date    : \034$(date '+%d.%m.%Y')"
+echo -e "\033[0;34m  Time    : \034$(date '+%H:%M:%S')"
+echo -e "\033[0;34m  Device  : \034$(getprop ro.product.model)"
+echo -e "\033[1;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\034"
+
+nmap localhost
+
+echo -e "\033[0;34m   [+] Starting system...\033[0m"
+echo -e "\033[0;34m   [+] Initializing core modules...\033[0m"
+echo -e "\033[0;34m   [+] Loading environment...\033[0m"
+echo -e "\033[0;34m   [+] Checking system status...\033[0m"
+echo -e "\033[0;34m   [+] Establishing secure session...\033[0m"
+echo -e "\033[0;34m   [+] Loading configuration...\033[0m"
+echo -e "\033[0;34m   [+] Initializing terminal...\033[0m"
+echo -e "\033[0;34m   [+] Checking network interface...\033[0m"
+echo -e "\033[0;34m   [+] Starting background services...\033[0m"
+echo -e "\033[0;34m   [+] Loading user profile...\033[0m"
+echo -e "\033[0;34m   [+] Verifying system integrity...\033[0m"
+echo -e "\033[0;34m   [+] Preparing workspace...\033[0m"
+echo -e "\033[0;34m   [+] Mounting storage...\033[0m"
+echo -e "\033[0;34m   [+] Finalizing startup...\033[0m"
+echo -e "\033[0;34m   [+] Making fried eggs...\033[0m"
+echo -e "\033[1;34m   [✓] System ready.\033[0m"
+
+# ==========================================
+
+NEON='\033[1;34m'
+DIM_GREEN='\033[0;34m'
+RESET='\033[0m'
+WHITE='\033[1;97m'
+
+# Hacker-style prompt
+PS1="${NEON}┌──[${WHITE}\u${NEON}@${WHITE}p-shell${NEON}]──[${WHITE}\w${NEON}]
+└─${WHITE}\$ ${RESET}"
+
+# ls colors
+export LS_COLORS='di=1;92:ln=1;96:ex=1;92:fi=0'
+
+# Удобные команды
+alias ll='ls -lah --color=auto'
+alias la='ls -A --color=auto'
+alias cls='clear'
+
+# Неоново-зелёный echo
+necho() {
+    echo -e "${NEON}$*${RESET}"
+}
+
+# Системный заголовок
+necho "╔══════════════════════════════════════╗"
+necho "║    PhantomShell NETWORK TERMINAL     ║"
+necho "║             SYSTEM READY             ║"
+necho "╚══════════════════════════════════════╝"
+
+echo
+
+alias PS='source ~/.bashrc'
+alias PShell='source ~/.bashrc'
+alias PhantomShell='source ~/.bashrc'
